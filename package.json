@@ -1,0 +1,19 @@
+{
+  "name": "spaceBase",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/space150/spaceBase.git"
+  },
+  "homepage": "https://github.com/space150/spaceBase",
+  "devDependencies": {
+    "gulp": "^3.7.0",
+    "gulp-clean": "^0.3.0",
+    "gulp-compass": "^1.1.9",
+    "gulp-connect": "^2.0.5",
+    "gulp-jekyll": "0.0.0",
+    "gulp-markdown": "^0.1.2",
+    "gulp-remove-lines": "^0.1.0",
+    "gulp-shell": "^0.2.5",
+    "gulp-zip": "^0.3.4"
+  }
+}

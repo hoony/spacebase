@@ -8,3 +8,7 @@ images/compass-sprites
 
 # Compiled source for deployment
 dist/
+tmp
+node_modules
+zip
+site

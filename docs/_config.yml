@@ -1,0 +1,10 @@
+# Site settings
+title: spaceBase docs
+email: ""
+description: "spaceBase docs"
+baseurl: ""
+url: "http://spacebase.space150.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty

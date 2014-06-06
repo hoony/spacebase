@@ -1,0 +1,32 @@
+<p>Front-end starter files for new projects.</p>
+<h2 id="spacebase-is-a-boilerplate">spaceBase is a boilerplate</h2>
+<p>Unlike many other SCSS libraries, spaceBase is not intended to be included once and never touched. The goal with spaceBase is a boilerplate layer that you can build on, modify, tweak, and tailor to your needs.</p>
+<p>spaceBase is meant to be copied into your project for further modifications. The SCSS files in <code>scss/base/</code> are usually not modified much, but the files in <code>scss/ui/</code> are meant to be completely tailored to your project.</p>
+<h2 id="setting-up-spacebase">Setting Up spaceBase</h2>
+<p>After you download the latest spaceBase ZIP from the repo, you&#39;ll unzip it and copy folders into your own project.</p>
+<h3 id="stylesheets">Stylesheets</h3>
+<p>Copy the following to your project:</p>
+<pre><code>fonts/
+images/
+scss/
+.editorconfig
+</code></pre><p>spaceBase is built with Sass and Compass, so you&#39;ll need a Sass compiler and the Compass gem. A Compass <code>config.rb</code> is included in the spaceBase folder you can use for reference.</p>
+<p>Installing Ruby, Sass, and Compass is outside the scope of this document.</p>
+<p>spaceBase works well with static web tools like Middleman or Jekyll, or simple build tools (like a simple Gruntfile).</p>
+<p>Your editor should be setup with an EditorConfig plugin, so that certain basic code style standards are enforced automatically. See <a href="http://editorconfig.org/#download">http://editorconfig.org/#download</a> and install the plugin for your editor of choice.</p>
+<p>You can remove <code>scss/README.md</code>.</p>
+<h3 id="javascripts">JavaScripts</h3>
+<p>spaceBase has some opinions on JavaScript setup. You can copy the starter folder <code>javascripts/</code> if you like.</p>
+<h2 id="the-spacebase-structure">The spaceBase structure</h2>
+<pre><code>fonts/
+images/
+scss/
+  base/
+    ...
+  ui/
+    ...
+  _manifest.scss
+  _vars.scss
+  application-ie.css.scss
+  application.css.scss
+  styleguide.css.scss
