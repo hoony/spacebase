@@ -41,7 +41,7 @@ gulp.task("clean", function() {
 // up empty directories like fonts/ and javascripts/, which we want.
 gulp.task("zip", ["clean"], shell.task([
   "cp -r src spacebase-latest " +
-  "&& zip -r dist/spaceBase-latest.zip spacebase-latest " +
+  "&& zip -ur dist/spaceBase-latest.zip spacebase-latest " +
   "&& rm -r spacebase-latest"
 ]));
 
@@ -64,5 +64,5 @@ gulp.task("watch", function() {
 gulp.task("docs", ["readme", "jekyll"]);
 gulp.task("dev", ["docs", "watch", "serve"]);
 
-gulp.task("default", ["docs", "zip"]);
+gulp.task("default", ["docs"]);
 
