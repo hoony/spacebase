@@ -57,4 +57,4 @@ scss/
   styleguide.css.scss
 ```
 
-Read the [CSS Architecture Overview](scss/README.md) for details on these files.
+Read the [CSS Architecture Overview](src/scss/README.md) for details on these files.
