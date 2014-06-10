@@ -1,4 +1,4 @@
-![](images/logo.jpg)
+![](docs/images/logo.jpg)
 
 # spaceBase
 
