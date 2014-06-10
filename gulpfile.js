@@ -3,7 +3,6 @@ var options, paths,
   gulp = require("gulp"),
 
   clean = require("gulp-clean"),
-  compass = require("gulp-compass"),
   markdown = require("gulp-markdown"),
   removeLines = require("gulp-remove-lines"),
   shell = require("gulp-shell"),
@@ -11,10 +10,10 @@ var options, paths,
 
 paths = {
   clean: [
-    "zip/**/*"
+    "dist/**/*"
   ],
   jekyll: {
-    build: "site",
+    build: "docs/_site",
     source: "docs",
     includes: "docs/_includes",
     all: "docs/**/*"
@@ -22,26 +21,11 @@ paths = {
   readme: "README.md",
   scss: "scss/**/*.scss",
   zip: [
-    "javascripts/**/*",
-    "scss/**/*",
-    "stylesheets/",
-    "images/",
-    "fonts/",
-    "config.rb",
-    "styleguide.html"
+    "src/**/*"
   ]
 };
 
-options = {
-  compass: {
-    project: path.join(__dirname, '/'),
-    css: "docs/css",
-    sass: "scss",
-    style: "compressed",
-    relative: true,
-    comments: false
-  }
-};
+options = {};
 
 gulp.task("readme", function() {
   return gulp.src(paths.readme)
@@ -53,32 +37,23 @@ gulp.task("readme", function() {
     .pipe(gulp.dest(paths.jekyll.includes));
 });
 
-gulp.task("compass", function() {
-  return gulp.src(paths.scss)
-    .pipe(compass(options.compass))
-    .pipe(gulp.dest("docs/css"));
-});
-
 gulp.task("clean", function() {
   gulp.src(paths.clean)
     .pipe(clean());
 });
 
 gulp.task("zip", ["clean"], function() {
-  gulp.src(paths.zip, {base: "./"}).pipe(gulp.dest("zip/"));
-  gulp.src("zip/*")
-    .pipe(zip('spaceBase.zip'))
-    .pipe(gulp.dest('docs'));
+  return gulp.src(paths.zip, {base: "./"})
+    .pipe(zip('spaceBase-latest.zip'))
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task("jekyll", shell.task([
-  "jekyll build --source " + paths.jekyll.source +
-  " --destination " + paths.jekyll.build
+  "cd " + paths.jekyll.source + " && jekyll build"
 ]));
 
 gulp.task("serve", shell.task([
-  "jekyll serve --watch --source " + paths.jekyll.source +
-  " --destination " + paths.jekyll.build
+  "cd " + paths.jekyll.source + " && jekyll serve --watch"
 ]));
 
 gulp.task("deploy", shell.task([

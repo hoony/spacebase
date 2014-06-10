@@ -1,1 +1,49 @@
-.sg-landmark{margin-bottom:75px}.sg-heading{padding:0 0 0.5em;border-bottom:2px solid #999}.sg-demo-block{background-color:#999;color:#fff;padding:12.5px;margin:0 0 25px}.sg-colors li{border:1px solid #ccc;background:#fff;padding:5px;margin-bottom:12.5px}.sg-swatch{display:block;height:100px;width:100px}.sg-field-container{margin-bottom:1em}.sg-field-container label{display:block}
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/* line 6, ../_sass/scss/styleguide.scss */
+.sg-landmark {
+  margin-bottom: 75px;
+}
+
+/* line 10, ../_sass/scss/styleguide.scss */
+.sg-heading {
+  padding: 0 0 0.5em;
+  border-bottom: 2px solid #999999;
+}
+
+/* line 16, ../_sass/scss/styleguide.scss */
+.sg-demo-block {
+  background-color: #999999;
+  color: white;
+  padding: 12.5px;
+  margin: 0 0 25px;
+}
+
+/* line 23, ../_sass/scss/styleguide.scss */
+.sg-colors li {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 5px;
+  margin-bottom: 12.5px;
+}
+
+/* line 30, ../_sass/scss/styleguide.scss */
+.sg-swatch {
+  display: block;
+  height: 100px;
+  width: 100px;
+}
+
+/* line 36, ../_sass/scss/styleguide.scss */
+.sg-field-container {
+  margin-bottom: 1em;
+}
+
+/* line 40, ../_sass/scss/styleguide.scss */
+.sg-field-container label {
+  display: block;
+}
