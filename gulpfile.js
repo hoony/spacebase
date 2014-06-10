@@ -5,8 +5,7 @@ var options, paths,
   clean = require("gulp-clean"),
   markdown = require("gulp-markdown"),
   removeLines = require("gulp-remove-lines"),
-  shell = require("gulp-shell"),
-  zip = require("gulp-zip");
+  shell = require("gulp-shell");
 
 paths = {
   clean: [
@@ -19,10 +18,7 @@ paths = {
     all: "docs/**/*"
   },
   readme: "README.md",
-  scss: "scss/**/*.scss",
-  zip: [
-    "src/**/*"
-  ]
+  scss: "scss/**/*.scss"
 };
 
 options = {};
@@ -38,15 +34,16 @@ gulp.task("readme", function() {
 });
 
 gulp.task("clean", function() {
-  gulp.src(paths.clean)
-    .pipe(clean());
+  gulp.src(paths.clean).pipe(clean());
 });
 
-gulp.task("zip", ["clean"], function() {
-  return gulp.src(paths.zip, {base: "./"})
-    .pipe(zip('spaceBase-latest.zip'))
-    .pipe(gulp.dest('dist'));
-});
+// I'd like to use gulp-zip or something but it doesn't seem to support zipping
+// up empty directories like fonts/ and javascripts/, which we want.
+gulp.task("zip", ["clean"], shell.task([
+  "cp -r src spacebase-latest " +
+  "&& zip -r dist/spaceBase-latest.zip spacebase-latest " +
+  "&& rm -r spacebase-latest"
+]));
 
 gulp.task("jekyll", shell.task([
   "cd " + paths.jekyll.source + " && jekyll build"
