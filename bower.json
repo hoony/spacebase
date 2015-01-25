@@ -1,0 +1,23 @@
+{
+  "name": "spaceBase-1.0",
+  "version": "1.0.0",
+  "authors": [
+    "Hoony",
+    "Jang <thechunsik@gmail.com>"
+  ],
+  "description": "spaceBase is a Sass-based responsive CSS framework.",
+  "main": "stylesheets/application.css",
+  "keywords": [
+    "css",
+    "framework",
+    "sass-based",
+    "responsive"
+  ],
+  "license": "MIT",
+  "homepage": "http://spacebase.space150.com",
+  "ignore": [
+    "**/.*",
+    ".sass-cached"
+    "tests"
+  ]
+}
