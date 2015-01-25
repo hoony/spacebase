@@ -17,7 +17,7 @@
   "homepage": "http://spacebase.space150.com",
   "ignore": [
     "**/.*",
-    ".sass-cached"
+    ".sass-cached",
     "tests"
   ]
 }
